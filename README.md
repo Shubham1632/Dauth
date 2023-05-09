@@ -75,6 +75,7 @@ dauth
     console.error(`Error verifying user: ${err}`);
   });
 ```
+
 ---
 
 #### `async isUserOfAddress(address: string): Promise<boolean>`
@@ -104,6 +105,7 @@ if (isUser) {
   console.log("User of this username does not exist");
 }
 ```
+
 ---
 
 #### `async getUserNameByAddress(address: string): Promise<string>`
@@ -114,19 +116,23 @@ Gets the username associated with the specified Ethereum address. If the address
 const username = await dauth.getUserNameByAddress(address);
 console.log(username);
 ```
+
 ---
 
-#### `async getUserNameByAddress(address: string): Promise<bool>`
-  
- Creats the user in the smart contract memory, needs to be evcated by the signed object of the package. thus need your private key for creating a signer for the transaction.
-  
- ```js
-  const result = await dauthWithSigner.createUser(username, email, password, address);
-  if (result) {
+#### `async createUser(address: string): Promise<bool>`
+
+Creats the user in the smart contract memory, needs to be evcated by the signed object of the package. thus need your private key for creating a signer for the transaction.
+
+```js
+const result = await dauthWithSigner.createUser(
+  username,
+  email,
+  password,
+  address
+);
+if (result) {
   console.log("User is created");
 } else {
   console.log("User is already in the memory");
 }
-  ```
-
-
+```

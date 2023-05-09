@@ -217,7 +217,7 @@ const abi = [
   },
 ];
 
-const contractAddress = "0x9037c252a112a097CfF6b81c1E9b31beF13dA9ef";
+const contractAddress = "0x39088b95E977f24b9F02D1d0777d79eaA9A5bC10";
 
 const providerUrl =
   "https://eth-sepolia.g.alchemy.com/v2/zJRZ96qtW_jI2M7f6Yo4RDz03DAmEplO";
