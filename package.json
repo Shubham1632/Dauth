@@ -1,0 +1,23 @@
+{
+  "name": "dauth-sso",
+  "version": "1.0.0",
+  "description": "Dauth is a decentralized user authentication system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shubham1632/Dauth.git"
+  },
+  "author": "Shubham Gangurde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shubham1632/Dauth/issues"
+  },
+  "homepage": "https://github.com/Shubham1632/Dauth#readme",
+  "dependencies": {
+    "ethers": "^5.7.2"
+  },
+  "type": "commonjs"
+}
