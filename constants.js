@@ -1,28 +1,8 @@
 const abi = [
   {
-    anonymous: false,
-    inputs: [
-      {
-        indexed: false,
-        internalType: "string",
-        name: "alter_email",
-        type: "string",
-      },
-      {
-        indexed: false,
-        internalType: "string",
-        name: "addr",
-        type: "string",
-      },
-      {
-        indexed: false,
-        internalType: "uint256",
-        name: "number",
-        type: "uint256",
-      },
-    ],
-    name: "userCreated",
-    type: "event",
+    inputs: [],
+    stateMutability: "nonpayable",
+    type: "constructor",
   },
   {
     inputs: [
@@ -42,28 +22,19 @@ const abi = [
         type: "string",
       },
       {
-        internalType: "string",
-        name: "_addr",
-        type: "string",
-      },
-      {
-        internalType: "string",
-        name: "_alt_email",
-        type: "string",
-      },
-      {
-        internalType: "uint256",
-        name: "_number",
-        type: "uint256",
-      },
-      {
         internalType: "address",
         name: "_address",
         type: "address",
       },
     ],
     name: "createUser",
-    outputs: [],
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
     stateMutability: "nonpayable",
     type: "function",
   },
@@ -81,47 +52,6 @@ const abi = [
         internalType: "string",
         name: "",
         type: "string",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
-        internalType: "string",
-        name: "_user",
-        type: "string",
-      },
-    ],
-    name: "getinfo",
-    outputs: [
-      {
-        components: [
-          {
-            internalType: "string",
-            name: "username",
-            type: "string",
-          },
-          {
-            internalType: "string",
-            name: "email",
-            type: "string",
-          },
-          {
-            internalType: "string",
-            name: "password",
-            type: "string",
-          },
-          {
-            internalType: "uint256",
-            name: "num",
-            type: "uint256",
-          },
-        ],
-        internalType: "struct sso.user",
-        name: "",
-        type: "tuple",
       },
     ],
     stateMutability: "view",
@@ -179,6 +109,19 @@ const abi = [
     type: "function",
   },
   {
+    inputs: [
+      {
+        internalType: "address",
+        name: "_address",
+        type: "address",
+      },
+    ],
+    name: "makeAdmin",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
     inputs: [],
     name: "userCount",
     outputs: [
@@ -217,7 +160,7 @@ const abi = [
   },
 ];
 
-const contractAddress = "0x39088b95E977f24b9F02D1d0777d79eaA9A5bC10";
+const contractAddress = "0x50dF0a773B6dBFCD2A6d3096eeDE69BA23dfa2d6";
 
 const providerUrl =
   "https://eth-sepolia.g.alchemy.com/v2/zJRZ96qtW_jI2M7f6Yo4RDz03DAmEplO";

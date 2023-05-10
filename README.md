@@ -37,9 +37,9 @@ For the integrity of the system we have decided to have an authorisation over cr
 For getting the authority to create a user, the organization need to register themselves over the official website of the Dauth-SSO. After verification ther organisations adress will be admin of the smart contract and they can use the create user functionality.
 
 ```js
-const { Dauth } = require("dauth-sso");
+const { DauthSigner } = require("dauth-sso");
 
-const dauthWithSigner = new Dauth(privateKey);
+const dauthWithSigner = new DauthSigner(privateKey);
 ```
 
 The admin can create a object with signer in it as mentioned above, so that admin will able to use the createUser function (as write operation on blockchain requires gas fees).
@@ -130,9 +130,4 @@ const result = await dauthWithSigner.createUser(
   password,
   address
 );
-if (result) {
-  console.log("User is created");
-} else {
-  console.log("User is already in the memory");
-}
 ```

@@ -1,6 +1,6 @@
 {
   "name": "dauth-sso",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Dauth is a decentralized user authentication system",
   "main": "index.js",
   "scripts": {
