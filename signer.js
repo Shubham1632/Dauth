@@ -17,6 +17,11 @@ class DauthSigner {
     );
     return result;
   }
+
+  async makeAdmin(address) {
+    const result = await this.contract.makeAdmin(address);
+    return result;
+  }
 }
 
 module.exports = DauthSigner;

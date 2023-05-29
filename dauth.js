@@ -2,7 +2,7 @@ const { ethers } = require("ethers");
 const { contractAddress, abi, providerUrl } = require("./constants.js");
 
 class Dauth {
-  constructor(privateKey) {
+  constructor() {
     this.provider = new ethers.providers.JsonRpcProvider(providerUrl);
     this.authContract = new ethers.Contract(
       contractAddress,
